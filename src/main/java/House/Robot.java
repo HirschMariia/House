@@ -1,5 +1,7 @@
 package House;
 
+import static java.lang.Character.getName;
+
 public class Robot {
 
     private static int robotCount = 0;
@@ -8,9 +10,9 @@ public class Robot {
 
     private String name = "Name";
 
-    private String description;
+    private final String description;
 
-    private int version;
+    private final int version;
 
     public Robot(String name, String description, int version) {
         this.name = name;
@@ -27,7 +29,6 @@ public class Robot {
     }
 
     public static void printTotalRobotCount(){
-//        System.out.println(this.name); impossible
         System.out.println("Total robot number = " + robotCount);
     }
 
@@ -36,7 +37,21 @@ public class Robot {
         System.out.println("Total robot number = " + robotCount);
     }
 
+    public void walk(Animal animal) {
+        System.out.println("Robot " + name + " is walking with " + animal.getName());
+    }
+
+    public void catchMouse(Mouse mouse){
+        System.out.println(getName() + " is catching the mouse " + mouse.getName());
+    }
+
+    private boolean getName() {
+        return false;
+    }
+
 
 }
+
+
 
 
